@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Rubik', sans-serif;
+    /* width: 90%; */
+}
+
+
+/* ENCABEZADO CON LOGO ACADEMLO E ICONO DE CARRITO */
+
+h6{
+    padding-top: 1.5rem;
+
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+}
+
+.img-academlo{
+    padding: 1rem;
+    width: 4.5rem;
+    margin: 0;
+}
+
+.shopcar{
+    display: flex;
+    justify-content: end;
+    width: 2rem;
+    height: 2rem;
+    /* padding: 1rem; */
+}
+
+.buttonshop{
+    border: none;
+    background-color: transparent;
+    padding-right: 1rem;
+}
+
+/* LOGO ACADEMLO  */
+.bg-orange{
+    background-color: #eb4a5a;
+    width: 100%;
+    height: 20rem;
+}
+
+.img-banner{
+    display: flex;
+    width: 18rem;
+    height: 18rem;
+    
+}
+
+/* <!-- TEXTO TODOS LOS PRODUCTOS / CUADRO DE BUSQUEDA --> */
+
+.buscar{
+    position: absolute;
+    padding: 0.5rem;
+}
+.buscar input{
+    width: 0;
+    height: 40px;
+    padding: 0 10px;
+    font-size: 18px;
+    color: #000;
+    outline: none;
+    border: 1px solid silver;
+    border-radius: 30px;
+    transition: all 0.6s ease;
+    
+}
+
+.bt{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #eb4a5a;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.buscar:hover input{
+    width: 240px;
+}
+
+.buscar input:focus{
+    width: 240px;
+}
+
+/* TARJETAS DE PRODUCTOS */
+
+.cards{
+    width: 18rem;
+    margin-right: 5rem;
+    border: 1px solid black;
+    border-radius: 10px;
+}
