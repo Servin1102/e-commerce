@@ -24,7 +24,7 @@
         </div>
         <div class="col-6 d-flex flex-row-reverse">
             <button class="buttonshop">
-                <img src="./img/shopping_cart_checkout_FILL0_wght400_GRAD0_opsz48.svg" class="shopcar" alt="">
+                <a href="./resumen.html"><img src="./img/shopping_cart_checkout_FILL0_wght400_GRAD0_opsz48.svg" class="shopcar" alt=""></a>  
             </button>
         </div>
    </div>
@@ -44,52 +44,24 @@
                 </h4>
             </div>
             <div class="col-6 d-flex flex-row-reverse justify-content-start">
-                <div class="buscar">
-                        <input type="text" placeholder="Buscar" required>
-                    <div class="bt">
-                            <i class="fas fa-search"></i>
-                    </div>
-                </div>  
+                <form  onsubmit="event.preventDefault(), filterBynombre()" >
+                    <div class="buscar">
+                            <input type="text" id="find-name" placeholder="Buscar" required>
+                            <button type="submit">
+                                <div class="bt">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                            </button>
+                    </div>  
+                 </form>
             </div>
        </div>
     </div>
        <!-- AQUI VAN LOS PRODUCTOS -->
     <div class="container mt-5">
-        <div class="row d-flex justify-content-center">
-            <div class="col-4">
-                <div class="card shadow p-3 mb-5 bg-body rounded" style="width: 18rem;">
-                    <img src="./img/playera1.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Name product</h5>
-                      <p class="card-text">Description</p>
-                      <p class="card-text">Color</p>
-                      <p class="card-text text-end">$200</p>
-                      <a href="#" class=" btn btn-primary agregar-carrito" data-id="1">Agregar al carrito</a>
-                    </div>
-                  </div>
-            </div>
-            <div class="col-4">
-                <div class="card shadow p-3 mb-5 bg-body rounded" style="width: 18rem;">
-                    <img src="./img/playera1.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Name product</h5>
-                      <p class="card-text">Description</p>
-                      <p class="card-text">Color</p>
-                      <p class="card-text text-end">$200</p>
-                      <a href="#" class=" btn btn-primary agregar-carrito" data-id="1">Agregar al carrito</a>
-                    </div>
-                  </div>
-            </div>
-            <div class="col-4">
-                <div class="card shadow p-3 mb-5 bg-body rounded" style="width: 18rem;">
-                    <img src="./img/playera1.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Name product</h5>
-                        <p class="card-text">Description</p>
-                        <p class="card-text">Color</p>
-                        <p class="card-text text-end">$200</p>
-                        <a href="#" class=" btn btn-primary agregar-carrito" data-id="1">Agregar al carrito</a>
-                    </div>
+        <div class="row d-flex justify-content-center" id="container-prodcuts">
+            <!--AQUI DENTRO VAN LOS PRODCTOS CON BASE EN MI DATA  -->
+            
         </div>
     </div>
     <!-- MAS PRODUCTOS -->
@@ -109,6 +81,6 @@
        
     </footer>
 
-    <script src="./js/carrito.js"></script>
+    <script src="./java/script.js" type="module"></script>
 </body>
 </html>
