@@ -3,22 +3,39 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Resumen</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/styles.css">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <!--header-->
-    <h3 class="w-80  my-3"><a href="index.html"><img src="img/arrow-left.svg" alt="flecha" ></a> Tienda oficial</h3>
-    
+    <div class="row">
+        <div class="col-6">
+            <img src="./img/logoacademlo.png" class="img-academlo" alt="">
+            <h6>Academlo</h6>
+        </div>
+        <div class="col-6 d-flex flex-row-reverse">
+            <button class="buttonshop">
+                <img src="./img/shopping_cart_checkout_FILL0_wght400_GRAD0_opsz48.svg" class="shopcar" alt="">
+            </button>
+        </div>
+   </div >
+
+   <!--titulo-->
+   <div class="w-80 m-auto mb-3">
+        <h6 ><a href="index.html"><img src="img/arrow-left.svg" alt="flecha" ></a> Academlo-Tienda oficial</h6>
+    </div>
     <div class="row w-80 bg-light my-2">
         <p class="col-6"> Resumen del pedido</p>
-        <p class="col-6">$</p>
+        <p class="col-6 d-flex justify-content-end">$</p>
     </div>
-    <div class="w-80">
+
+    <!--Card de la compra-->
+    <div class="w-80 ">
         <div class="card border-0  bg-light">
-            <div class="row g-0">
-                 <div class="col-4 ps-4 pt-2 pb-5 ">
+            <div class="row g-0 px-5">
+                 <div class="col-4  pt-2 pb-5 ">
                       <img src="img/polera.webp" alt="polera" class="img-fluid w-100 h-100 rounded-start">
                  </div>
 
@@ -34,11 +51,11 @@
                             </div>
                             <div class="row justify-content-between">
                                 <div class="col-6">
-                                    <button class="col-3"><img src="img/dash-lg.svg" alt="menos"></button>
-                                    1
-                                    <button class="col-3"><img src="img/plus-lg.svg" alt="mas"></button>
+                                    <button class="col-2"><img src="img/dash-lg.svg" alt="menos"></button>
+                                    <input class=" col-2" type="number" value="1"  >
+                                    <button class="col-2"><img src="img/plus-lg.svg" alt="mas"></button>
                                 </div>
-                                <button class="col-2  "><img src="img/trash3.svg " alt="" class="w-100% h-100%"></button>
+                                <button class="col-1 d-flex justify-content-center align-items-center  "><img src="img/trash3.svg " alt="" class="w-100% h-100%"></button>
 
                             </div>
                       </div>
@@ -47,7 +64,7 @@
             </div>
        </div>
   
-
+    <!--Resumen-->
     </div>
 
     <div class="w-65">
@@ -66,59 +83,60 @@
         </div>
     </div>
 
+    <!--Contacto-->
     <div class="w-80" >
     
         <h3>Datos del contacto</h3>
         <div class="row justify-content-between">
             <div class="col-5 mb-3 " >
-                <label for="formGroupExampleInput" class="form-label">Nombre(s)</label>
+                <label for="name" class="form-label">Nombre(s)<span>*</span></label>
                 <input type="text" class="form-control" id="name" placeholder="Intoduce tu numbre">
             </div>
             <div class="col-5 mb-3">
-                <label for="formGroupExampleInput2" class="form-label">Apellidos</label>
+                <label for="lastNane" class="form-label">Apellidos <span>*</span></label>
                 <input type="text" class="form-control" id="lastNane" placeholder="Intoduce tus apellidos">
             </div>
             <div class="col-5 mb-3">
-                <label for="formGroupExampleInput2" class="form-label">Correo Electronico</label>
+                <label for="email" class="form-label">Correo Electronico<span>*</span></label>
                 <input type="text" class="form-control" id="email" placeholder="Introduce tu correo">
             </div>
             
        </div>
     </div>
     
-    
+    <!--Direccion-->
     <div class="w-80" >
     
-        <h3>Direccin de envio</h3>
+        <h3>Dirección de envio</h3>
         <div class="row justify-content-between">
             <div class="col-5 mb-3 " >
-                <label for="formGroupExampleInput" class="form-label">Direccion de envio</label>
+                <label for="street" class="form-label">Direccion de envio<span>*</span></label>
                 <input type="text" class="form-control" id="street" placeholder="Calle">
             </div>
             <div class="col-5 mb-3">
-                <label for="formGroupExampleInput2" class="form-label">Ciudad</label>
+                <label for="city" class="form-label">Ciudad<span>*</span></label>
                 <input type="text" class="form-control" id="city" placeholder="Intoduce tu ciudad">
             </div>
         </div>
         <div class="row justify-content-between">
             <div class="row col-5 justify-content-between p-0 m-0">
                 <div class="col-6 mb-3 " >
-                    <label for="formGroupExampleInput" class="form-label">Numero interior</label>
+                    <label for="int" class="form-label">Numero interior</label>
                     <input type="text" class="form-control" id="int" placeholder="000">
                 </div>
                 <div class=" col-6 mb-3 " >
-                    <label for="formGroupExampleInput" class="form-label">Numero exterior</label>
+                    <label for="ext" class="form-label">Numero exterior</label>
                     <input type="text" class="form-control" id="ext" placeholder="000">
                 </div>
             </div>
             <div class="row col-5 justify-content-between p-0 m-0">
                 <div class="col-6 mb-3  " >
-                    <label for="formGroupExampleInput" class="form-label">CP</label>
+                    <label for="CP" class="form-label">CP<span>*</span></label>
                     <input type="text" class="form-control" id="CP" placeholder="000">
                 </div>
                 <div class="col-6 mb-3 " >
-                    <label for="formGroupExampleInput" class="form-label">Numero exterior</label>
-                    <select class="form-select" aria-label="Default select example">
+                    <label for="country" class="form-label">Pais<span>*</span></label>
+                    <select class="form-select" >
                         <option selected>Mexico</option>
                         <option value="1">Colombia</option>
                         <option value="2">Peru</option>
@@ -147,10 +165,22 @@
         </div>
     </div>
 
-    <div class="w-65 row justify-content-between c-">
-        <a href="#" class="col-4 text-decoration-none">Continuar pago</a>
-        <a href="#" class="col-4 text-decoration-none">Vover al carrito</a>
+    <div class="w-65 row justify-content-between ">
+        <div class="col-4 bg-red d-flex justify-content-center py-2">
+            <a href="#" class=" text-decoration-none color-white ">Continuar pago</a>
+        </div>
+        <div class="col-4  bd-blue d-flex justify-content-center py-2">
+            <a href="#" class=" text-decoration-none color-blue">Vover al carrito</a>
+        </div>
     </div>
+    
+    <!-- PIE DE PAGINA -->
+    <footer class="container mt-5">
+        <div class="d-flex justify-content-center">
+            <h6>Hecho en Academlo</h6>
+        </div>
+       
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
   </body>
 </html>

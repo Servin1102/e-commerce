@@ -1,3 +1,12 @@
+:root{
+    --color-red:#eb4a5a;
+    --color-blue:#274671;
+}
+
+span{
+    color: red;
+}
+
 .w-65{
     width: 65%;
     margin: auto;
@@ -5,4 +14,18 @@
 .w-80{
     width: 80%;
     margin: auto;
+}
+
+/*pra los botones*/
+.color-white{
+    color: white;
+}
+.bg-red{
+    background-color: var(--color-red);
+}
+.color-blue{
+    color: var(--color-blue);
+}
+.bd-blue{
+    border: 1px solid var(--color-blue);
 }
