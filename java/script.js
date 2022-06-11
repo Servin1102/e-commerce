@@ -2,10 +2,13 @@
 import { article } from './data.js';
 import { filter, find } from './Filtros.js'
 
+let shoppingCart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
+
+
 function generateCardsArticle(articleArray) {
     let html = '';
     for(let i = 0; i < articleArray.length; i++) {
-        html += `<div class="col-4">
+        html += `<div class="col-lg-4 col-sm-8 col-md-6">
                     <div class="card shadow p-3 mb-5 bg-body rounded" style="width: 18rem;">
                         <img src="${articleArray[i].Imagen}" class="card-img-top" alt="...">
                         <div class="card-body">
@@ -13,7 +16,7 @@ function generateCardsArticle(articleArray) {
                         <p class="card-text">${articleArray[i].Description}</p>
                         <p class="card-text">${articleArray[i].Color}</p>
                         <p class="card-text text-end">${articleArray[i].Precio}</p>
-                        <a href="#" class=" btn btn-primary agregar-carrito" data-id="1">Agregar al carrito</a>
+                        <a href="#" class=" btn btn-primary agregar-carrito" data-id="1" onclick="addToCard(${articleArray[i].id})">Agregar al carrito</a>
                         </div>
                     </div>
                 </div>`;
@@ -36,3 +39,37 @@ function filterBynombre() {
     generateCardsArticle(articleByName);
 }
 window.filterBynombre = filterBynombre;
+
+// AGREGAR AL CARRITO
+function generateShopingCart() {
+    let ShopCart = JSON.parse (localStorage.getItem("shoppingCart")) || [];
+    let html = '';
+    for(let i = 0; i < ShopCart.length; i++) {
+        html += `<tr>
+                    <th scope="row"> <img src="${ShopCart[i].Imagen}" class="img-carrito" alt=""> </th>
+                    <td>${ShopCart[i].Name}</td>
+                    <td>${ShopCart[i].Description}</td>
+                    <td>${ShopCart[i].Precio}</td>
+                    <td><button class="col-2 d-flex justify-content-center align-items-center  "><img src="img/trash3.svg " alt="" class="w-100% h-100%"></button></td>
+                </tr>`;
+    }
+    const container = document.getElementById('container-car');
+    container.innerHTML = html;
+
+}
+
+
+function addToCard (id){
+    function cbFindId(product){
+        return product.id === id
+    }
+    let articulo = find(article, cbFindId)
+    shoppingCart.push(articulo);
+    JSON.stringify(localStorage.setItem("shoppingCart", JSON.stringify(shoppingCart)))
+}
+
+
+
+
+window.addToCard = addToCard;
+window.generateShopingCart=generateShopingCart;
