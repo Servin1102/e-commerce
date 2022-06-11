@@ -3,6 +3,10 @@
     --color-blue:#274671;
 }
 
+*{
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Rubik', sans-serif;
+}
 span{
     color: red;
 }
@@ -28,4 +32,9 @@ span{
 }
 .bd-blue{
     border: 1px solid var(--color-blue);
+}
+
+.img-carrito{
+    width: 3rem;
+    height: 3rem;
 }
