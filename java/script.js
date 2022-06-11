@@ -5,6 +5,7 @@ import { filter, find } from './Filtros.js'
 let shoppingCart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
 
 
+
 function generateCardsArticle(articleArray) {
     let html = '';
     for(let i = 0; i < articleArray.length; i++) {
@@ -50,7 +51,7 @@ function generateShopingCart() {
                     <td>${ShopCart[i].Name}</td>
                     <td>${ShopCart[i].Description}</td>
                     <td>${ShopCart[i].Precio}</td>
-                    <td><button class="col-2 d-flex justify-content-center align-items-center  "><img src="img/trash3.svg " alt="" class="w-100% h-100%"></button></td>
+                    <td><button class="col-2 d-flex justify-content-center align-items-center" id="delete-product"><img src="img/trash3.svg " alt="" class="w-100% h-100%"></button></td>
                 </tr>`;
     }
     const container = document.getElementById('container-car');
@@ -73,3 +74,4 @@ function addToCard (id){
 
 window.addToCard = addToCard;
 window.generateShopingCart=generateShopingCart;
+
