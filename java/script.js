@@ -16,7 +16,7 @@ function generateCardsArticle(articleArray) {
                         <h5 class="card-title">${articleArray[i].Name}</h5>
                         <p class="card-text">${articleArray[i].Description}</p>
                         <p class="card-text">${articleArray[i].Color}</p>
-                        <p class="card-text text-end">${articleArray[i].Precio}</p>
+                        <p class="card-text text-end">$ ${articleArray[i].Precio}</p>
                         <a href="#" class=" btn btn-primary agregar-carrito" data-id="1" onclick="addToCard(${articleArray[i].id})">Agregar al carrito</a>
                         </div>
                     </div>
@@ -50,7 +50,9 @@ function generateShopingCart() {
                     <th scope="row"> <img src="${ShopCart[i].Imagen}" class="img-carrito" alt=""> </th>
                     <td>${ShopCart[i].Name}</td>
                     <td>${ShopCart[i].Description}</td>
-                    <td>${ShopCart[i].Precio}</td>
+                    <td>$ ${ShopCart[i].Precio}</td>
+                    <td>${ShopCart[i].id}</td>
+                   
                     <td><button class="col-2 d-flex justify-content-center align-items-center" id="delete-product"><img src="img/trash3.svg " alt="" class="w-100% h-100%"></button></td>
                 </tr>`;
     }
@@ -67,11 +69,22 @@ function addToCard (id){
     let articulo = find(article, cbFindId)
     shoppingCart.push(articulo);
     JSON.stringify(localStorage.setItem("shoppingCart", JSON.stringify(shoppingCart)))
+    
+
+    const alert = document.querySelector('.alert')
+      
+    setTimeout( function(){
+        alert.classList.add('hide')
+        }, 2000)
+        alert.classList.remove('hide')
+    
 }
+
 
 
 
 
 window.addToCard = addToCard;
 window.generateShopingCart=generateShopingCart;
+
 
