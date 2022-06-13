@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./assets/styles.css">
     <link rel="stylesheet" href="style.css">
   </head>
-  <body>
+  <body >
     <!--header-->
     <div class="row">
         <div class="col-6">
@@ -33,12 +33,15 @@
 
     <!--Card de la compra-->
     
-    <div class="w-80 " id="container-resumen">
+    <div class="w-80 " id="container-con">
+        <form id="reset-document">
+
+        </form>
         
     </div>
     
        <!--Resumen-->
-    
+        
 
    
 
@@ -116,17 +119,60 @@
         </div>
         <div class="row">
             <p class="col-6">Envio</p>
-            <p class="col-6">$</p>
+            <p class="col-6">$ 0</p>
         </div>
         <div class="row">
             <p class="col-6">Total</p>
-            <p class="col-6">$</p>
+            <p class="col-6">$ <span class="color-black" id="Total"></span></p>
         </div>
     </div>
 
     <div class="w-65 row justify-content-between ">
         <div class="col-4 bg-red d-flex justify-content-center py-2">
-            <a href="./compra.html" class=" text-decoration-none color-white ">Continuar pago</a>
+            <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="buttonshop" >
+               <span class="color-white"> Continuar pago </span></Continuar>
+            </button>
+
+            <!-- modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Estas a un paso de finalizar tu compra</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row justify-content-between">
+
+                            <div class="col-5 mb-3 ">
+                                <label for="formGroupExampleInput" class="form-label">Numero de tarjeta</label>
+                                <input type="text" class="form-control" id="street" placeholder="**** **** ****">
+                            </div>
+            
+            
+                            <div class="col-2 mb-2  ">
+                                <label for="formGroupExampleInput" class="form-label">Fecha de expedicion</label>
+                                <input type="text" class="form-control" id="CP" placeholder="000">
+                            </div>
+                            <div class="col-2 mb-2  ">
+                                <label for="formGroupExampleInput" class="form-label">CVV</label>
+                                <input type="text" class="form-control" id="CP" placeholder="000">
+                            </div>
+                            <div class="col-6 mb-3  ">
+                                <label for="formGroupExampleInput" class="form-label">Pais</label>
+                                <input type="text" class="form-control" id="CP" placeholder="Mexico">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                      <button type="button" class="btn btn-danger" id="comprar" onclick="Paycar()"> Finalizar compra</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            
         </div>
         <div class="col-4  bd-blue d-flex justify-content-center py-2">
             <a href="./index.html" class=" text-decoration-none color-blue">Vover al carrito</a>
@@ -148,6 +194,7 @@
             let ShopCart = JSON.parse (localStorage.getItem("shoppingCart")) || [];
             let html = '';
             subTotal=0;
+            Total=0;
             for(let i = 0; i < ShopCart.length; i++) {
                 
                 html += `<div class="card   bg-light">
@@ -181,18 +228,27 @@
 
                             </div>
                         </div>`;
-                subTotal+=ShopCart[i].Precio;
-                
+
+                subTotal+=Number(ShopCart[i].Precio);
+                Total+=Number(ShopCart[i].Precio);
             }
             
             let containerTotal=document.getElementById('subTotal');
             containerTotal.innerHTML=subTotal;
-            const container = document.getElementById('container-resumen');
+            let containerTotal2=document.getElementById('Total');
+            containerTotal2.innerHTML=Total;
+            const container = document.getElementById('container-con');
             container.innerHTML = html;
 
             }
         generateShopingCart()
         
+
+        function Paycar(){
+            alert("Gracias por tu compra")  
+        }
+        
+
         
     </script>  
   </body>

@@ -53,7 +53,7 @@ function generateShopingCart() {
                     <td>$ ${ShopCart[i].Precio}</td>
                     <td>${ShopCart[i].id}</td>
                    
-                    <td><button class="col-2 d-flex justify-content-center align-items-center" id="delete-product"><img src="img/trash3.svg " alt="" class="w-100% h-100%"></button></td>
+                    
                 </tr>`;
     }
     const container = document.getElementById('container-car');
@@ -79,7 +79,6 @@ function addToCard (id){
         alert.classList.remove('hide')
     
 }
-
 
 
 
