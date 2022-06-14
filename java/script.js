@@ -51,7 +51,7 @@ function generateShopingCart() {
                     <td>${ShopCart[i].Name}</td>
                     <td>${ShopCart[i].Description}</td>
                     <td>$ ${ShopCart[i].Precio}</td>
-                    <td>${ShopCart[i].id}</td>
+                    
                    
                     
                 </tr>`;
@@ -79,6 +79,7 @@ function addToCard (id){
         alert.classList.remove('hide')
     
 }
+
 
 
 
