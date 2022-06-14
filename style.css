@@ -47,3 +47,16 @@ span{
 .hide{
     display: none;
 }
+
+.paypal{
+  background-image: url(./img/paypal.png);
+  height: 2.5rem;
+  width: 100%;
+  background-position: left;
+  background-repeat: no-repeat;
+
+ }
+
+ 
+
+

@@ -159,10 +159,12 @@
                       <h5 class="modal-title" id="exampleModalLabel">Estas a un paso de finalizar tu compra</h5>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
+                    <div>
+                        <button class="paypal" id="pagar" onclick="pagar()" ></button>
+                    </div>
                     <form id="resetear">
                         <div class="modal-body">
                             <div class="row justify-content-between">
-
                                 <div class="col-5 mb-3 ">
                                     <label for="formGroupExampleInput" class="form-label">Numero de tarjeta<span>*</span></label>
                                     <input type="text" class="form-control" id="street" placeholder="**** **** ****">
@@ -273,6 +275,10 @@
         function Paycar(){
             alert("Gracias por tu compra")
             document.getElementById("resetear").reset();
+        }
+
+        function pagar() {
+            alert("pago exitoso")
         }
 
         
