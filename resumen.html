@@ -18,6 +18,7 @@
         <div class="col-6 d-flex flex-row-reverse">
             <button class="buttonshop">
                 <img src="./img/shopping_cart_checkout_FILL0_wght400_GRAD0_opsz48.svg" class="shopcar" alt="">
+                
             </button>
         </div>
    </div >
@@ -145,22 +146,25 @@
                         <div class="row justify-content-between">
 
                             <div class="col-5 mb-3 ">
-                                <label for="formGroupExampleInput" class="form-label">Numero de tarjeta</label>
+                                <label for="formGroupExampleInput" class="form-label">Numero de tarjeta<span>*</span></label>
                                 <input type="text" class="form-control" id="street" placeholder="**** **** ****">
                             </div>
             
             
                             <div class="col-2 mb-2  ">
-                                <label for="formGroupExampleInput" class="form-label">Fecha de expedicion</label>
+                                <label for="formGroupExampleInput" class="form-label">Fecha de expedicion<span>*</span></label>
                                 <input type="text" class="form-control" id="CP" placeholder="000">
                             </div>
                             <div class="col-2 mb-2  ">
-                                <label for="formGroupExampleInput" class="form-label">CVV</label>
+                                <label for="formGroupExampleInput" class="form-label">CVV<span>*</span></label>
                                 <input type="text" class="form-control" id="CP" placeholder="000">
                             </div>
                             <div class="col-6 mb-3  ">
-                                <label for="formGroupExampleInput" class="form-label">Pais</label>
+                                <label for="formGroupExampleInput" class="form-label">Pais<span>*</span></label>
                                 <input type="text" class="form-control" id="CP" placeholder="Mexico">
+                            </div>
+                            <div> 
+                                <input type="checkbox" name="terminos"><p style="color:black;padding-left:30px;">Aceptar los <a style="color:gray;" href="#">Términos y Condiciones</a></p>
                             </div>
                         </div>
                     </div>
@@ -220,7 +224,9 @@
                                                     </p>
                                                     <button onclick="addCounter()" class=" bg-light col-2 py-2 d-flex justify-content-center align-items-center btn-group"><img src="img/plus-lg.svg" ></button>    
                                                 </div>
-                                                <button class="col-1 py-2 bg-light d-flex justify-content-center align-items-center btn-group "><img src="img/trash3.svg " alt="" class="w-100% h-100%"></button>
+                                                <button class="col-1 py-2 bg-light d-flex justify-content-center align-items-center btn-group "><img src="img/trash3.svg " alt="" class="w-100% h-100%">
+                                                </button>
+                                        
 
                                             </div>
                                     </div>
@@ -231,6 +237,9 @@
 
                 subTotal+=Number(ShopCart[i].Precio);
                 Total+=Number(ShopCart[i].Precio);
+               
+
+               
             }
             
             let containerTotal=document.getElementById('subTotal');
@@ -239,6 +248,7 @@
             containerTotal2.innerHTML=Total;
             const container = document.getElementById('container-con');
             container.innerHTML = html;
+            
 
             }
         generateShopingCart()
@@ -247,8 +257,8 @@
         function Paycar(){
             alert("Gracias por tu compra")  
         }
-        
 
+       
         
     </script>  
   </body>
