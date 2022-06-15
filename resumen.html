@@ -191,7 +191,7 @@
                     </form>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                      <button type="button" class="btn btn-danger" id="comprar" onclick="Paycar()"> Finalizar compra</button>
+                      <button type="button" class="btn btn-danger" id="comprar" onclick="Paycar();cleanstorage();"> Finalizar compra</button>
                     </div>
                   </div>
                 </div>
@@ -243,10 +243,11 @@
                                                     <input class="col-2 text-center" type="number" min="1" value="1">    
                                                 </div>
                                                 <button class="col-1 py-2 bg-light d-flex justify-content-center align-items-center btn-group" type="button" data-bs-toggle="modal" data-bs-target="#modaleliminar"><img src="img/trash3.svg " alt="" class="w-100% h-100%">
-                                                </button>
-                                        
 
-                                            </div>
+                                                 </button>
+                                                
+                                        
+                                                 </div>
                                     </div>
                                 </div>
 
@@ -277,9 +278,16 @@
             document.getElementById("resetear").reset();
         }
 
+        function cleanstorage(){
+            localStorage.clear()
+            window.location.reload()
+        }
+
         function pagar() {
             alert("pago exitoso")
         }
+
+        
 
         
         
