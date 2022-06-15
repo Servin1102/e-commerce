@@ -288,10 +288,10 @@
         function deletearticleArray(id){
             let barticle = JSON.parse(localStorage.getItem("shoppingCart"))
             for(i=0; i<barticle.length;i++){
-                console.log(barticle[i].id);
                 if(barticle[i].id === id){
-                localStorage.removeItem()
-            }
+                    localStorage.removeItem(barticle)
+                 }
+            
             }
             
         }
