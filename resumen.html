@@ -35,13 +35,11 @@
     <!--Card de la compra-->
     
     <div class="w-80 " id="container-con">
-        <form id="reset-document">
-
-        </form>
+        
         
     </div>
     
-       <!--Resumen-->
+      
         
     <!-- MODAL ELIMINAR -->
   <div class="modal fade" id="modaleliminar" tabindex="-1" aria-labelledby="modaleliminarLabel" aria-hidden="true">
@@ -190,7 +188,7 @@
                     </form>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                      <button type="button" class="btn btn-danger" id="comprar" onclick="Paycar()"> Finalizar compra</button>
+                      <button type="button" class="btn btn-danger" id="comprar" onclick="Paycar(); cleanstorage()"> Finalizar compra</button>
                     </div>
                   </div>
                 </div>
@@ -198,10 +196,10 @@
               
             
         </div>
-        <div class="col-4  bd-blue d-flex justify-content-center py-2">
-            <a href="./index.html" class=" text-decoration-none color-blue">Vover al carrito</a>
+            <div class="col-4 col-lg-4 col-sm-6 bd-blue d-flex justify-content-center py-2">
+                <a href="./index.html" class=" text-decoration-none color-blue">Volver a la tienda</a>
+            </div>
         </div>
-    </div>
     
     <!-- PIE DE PAGINA -->
     <footer class=" mt-5 bg-red w-100 m-0 p-0">
@@ -251,8 +249,7 @@
                                                 </div>
                                                 
                                                  
-                                                <button class="col-1 py-2 bg-light d-flex justify-content-center align-items-center btn-group" type="button" ><img src="img/trash3.svg " alt="" class="w-100% h-100%">
-                                                </button>
+                                                <button class="col-2 col-sm-2 py-2 bg-light d-flex justify-content-center align-items-center btn-group" type="button" data-bs-toggle="modal" data-bs-target="#modaleliminar" onclick="deletearticleArray(${ShopCart[i].id})"><img src="img/trash3.svg " alt="" class="w-100% h-100%">
                                         
 
                                             </div>
@@ -292,6 +289,10 @@
                 document.getElementById("resetear").reset();
         }
 
+        function cleanstorage(){
+            localStorage.clear()
+            window.location.reload()
+        }
 
         function sumar(){
         const envio=40;
