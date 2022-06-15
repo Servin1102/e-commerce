@@ -85,15 +85,7 @@ function addToCard(id) {
 
 //funcion  Eliminar
 function deletearticleArray (id){
-  let shopcart = JSON.parse(localStorage.getItem("shoppingcart"))
-  for (let i=0; i<shopcart.length; i++){
-    if(shopcart[i].id === id){
-        shopcart.splice(i,1);
-    }
-  }
-   
-  localStorage.setItem("shopcart",JSON.stringify(shopcart));
-  leer()
+  console.log(id);
 }
 
 
