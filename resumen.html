@@ -66,15 +66,15 @@
         <div class="row justify-content-between">
             <div class="col-5 mb-3 " >
                 <label for="name" class="form-label">Nombre(s)<span>*</span></label>
-                <input type="text" class="form-control" id="name" placeholder="Intoduce tu numbre">
+                <input type="text" class="form-control" id="name" placeholder="Intoduce tu numbre" required/>
             </div>
             <div class="col-5 mb-3">
                 <label for="lastNane" class="form-label">Apellidos <span>*</span></label>
-                <input type="text" class="form-control" id="lastNane" placeholder="Intoduce tus apellidos">
+                <input type="text" class="form-control" id="lastNane" placeholder="Intoduce tus apellidos" required/>
             </div>
             <div class="col-5 mb-3">
                 <label for="email" class="form-label">Correo Electronico<span>*</span></label>
-                <input type="email" class="form-control" id="email" placeholder="Introduce tu correo">
+                <input type="email" class="form-control" id="email" placeholder="Introduce tu correo" required/>
             </div>
             
        </div>
@@ -87,28 +87,28 @@
         <div class="row justify-content-between">
             <div class="col-5 mb-3 " >
                 <label for="street" class="form-label">Direccion de envio<span>*</span></label>
-                <input type="text" class="form-control" id="street" placeholder="Calle">
+                <input type="text" class="form-control" id="street" placeholder="Calle" required/>
             </div>
             <div class="col-5 mb-3">
                 <label for="city" class="form-label">Ciudad<span>*</span></label>
-                <input type="text" class="form-control" id="city" placeholder="Intoduce tu ciudad">
+                <input type="text" class="form-control" id="city" placeholder="Intoduce tu ciudad" required/>
             </div>
         </div>
         <div class="row justify-content-between">
             <div class="row col-5 justify-content-between p-0 m-0">
                 <div class="col-6 mb-3 " >
                     <label for="int" class="form-label">Numero interior</label>
-                    <input type="number" class="form-control" id="int" placeholder="000">
+                    <input type="text" class="form-control" id="int" placeholder="000" required/>
                 </div>
                 <div class=" col-6 mb-3 " >
                     <label for="ext" class="form-label">Numero exterior</label>
-                    <input type="number" class="form-control" id="ext" placeholder="000">
+                    <input type="text" class="form-control" id="ext" placeholder="000" required/>
                 </div>
             </div>
             <div class="row col-5 justify-content-between p-0 m-0">
                 <div class="col-6 mb-3  " >
                     <label for="CP" class="form-label">CP<span>*</span></label>
-                    <input type="number" class="form-control" id="CP" placeholder="0000">
+                    <input type="number" class="form-control" id="CP" placeholder="0000" required/>
                 </div>
                 <div class="col-6 mb-3 " >
                     <label for="country" class="form-label">Pais<span>*</span></label>
@@ -142,7 +142,7 @@
     </div>
 
     <div class="w-65 row justify-content-between ">
-        <div class="col-4 bg-red d-flex justify-content-center py-2">
+        <div class="col-4 col-sm-5  bg-red d-flex justify-content-center py-2">
             <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="buttonshop" >
                <span class="color-white"> Continuar pago </span></Continuar>
             </button>
@@ -151,33 +151,33 @@
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel">Estas a un paso de finalizar tu compra</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div>
-                        <button class="paypal" id="pagar" onclick="pagar()" ></button>
-                    </div>
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Estas a un paso de finalizar tu compra</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                        <div>
+                            <button class="paypal" id="pagar" onclick="pagar()" ></button>
+                        </div>
                     <form id="resetear">
                         <div class="modal-body">
                             <div class="row justify-content-between">
                                 <div class="col-5 mb-3 ">
                                     <label for="formGroupExampleInput" class="form-label">Numero de tarjeta<span>*</span></label>
-                                    <input type="text" class="form-control" id="street" placeholder="**** **** ****">
+                                    <input type="text" class="form-control" id="street" placeholder="**** **** ****" required/>
                                 </div>
                 
                 
-                                <div class="col-2 mb-2  ">
+                                <div class="col-2 mb-1  ">
                                     <label for="formGroupExampleInput" class="form-label">Fecha de expedicion<span>*</span></label>
                                     <input type="text" class="form-control" id="CP" placeholder="000">
                                 </div>
-                                <div class="col-2 mb-2  ">
+                                <div class="col-2 mb-1  ">
                                     <label for="formGroupExampleInput" class="form-label">CVV<span>*</span></label>
                                     <input type="text" class="form-control" id="CP" placeholder="000">
                                 </div>
                                 <div class="col-6 mb-3  ">
                                     <label for="formGroupExampleInput" class="form-label">Pais<span>*</span></label>
-                                    <input type="text" class="form-control" id="CP" placeholder="Mexico">
+                                    <input type="text" class="form-control" id="CP" placeholder="Mexico" required/>
                                 </div>
                                 <div> 
                                     <input type="checkbox" name="terminos"><p style="color:black;padding-left:30px;">Aceptar los <a style="color:gray;" href="#">Términos y Condiciones</a></p>
@@ -193,11 +193,10 @@
                 </div>
               </div>
               
-            
         </div>
-        <div class="col-4  bd-blue d-flex justify-content-center py-2">
-            <a href="./index.html" class=" text-decoration-none color-blue">Vover al carrito</a>
-        </div>
+            <div class="col-4 col-sm-6 bd-blue d-flex justify-content-center py-2">
+                <a href="./index.html" class=" text-decoration-none color-blue">Volver a la tienda</a>
+            </div>
     </div>
     
     <!-- PIE DE PAGINA -->
@@ -235,10 +234,10 @@
                                                 <p class="card-text col-6 color-r">Color:${ShopCart[i].Color}</p>
                                             </div>
                                             <div class="row justify-content-between">
-                                                <div class="col-4 d-flex text-center " >
-                                                    <input class="col-2 text-center" type="number" min="1" value="1">    
+                                                <div class="col-4 col-sm-6 d-flex text-center " >
+                                                    <input class="col-2 col-lg-2 col-sm-6 text-center" type="number" min="1" value="1">    
                                                 </div>
-                                                <button class="col-1 py-2 bg-light d-flex justify-content-center align-items-center btn-group" type="button" data-bs-toggle="modal" data-bs-target="#modaleliminar"><img src="img/trash3.svg " alt="" class="w-100% h-100%">
+                                                <button class="col-1 col-sm-2 py-2 bg-light d-flex justify-content-center align-items-center btn-group" type="button" data-bs-toggle="modal" data-bs-target="#modaleliminar" onclick="deletearticleArray(${ShopCart[i].id})"><img src="img/trash3.svg " alt="" class="w-100% h-100%">
 
                                                  </button>
                                                 
@@ -271,22 +270,32 @@
 
         function Paycar(){
             alert("Gracias por tu compra")
-            document.getElementById("resetear").reset();
+
+            
+            
         }
 
         function cleanstorage(){
             localStorage.clear()
             window.location.reload()
         }
-
+ 
         function pagar() {
             alert("pago exitoso")
         }
-
         
-
-        
-        
+        //funcion  Eliminar
+        function deletearticleArray(id){
+            let barticle = JSON.parse(localStorage.getItem("shoppingCart"))
+            for(i=0; i<barticle.length;i++){
+                console.log(barticle[i].id);
+                if(barticle[i].id === id){
+                localStorage.removeItem()
+            }
+            }
+            
+        }
+    
     </script> 
   </body>
 </html>

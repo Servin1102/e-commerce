@@ -83,15 +83,13 @@ function addToCard(id) {
 
 }
 
-//funcion  Eliminar
-function deletearticleArray (id){
-  console.log(id);
-}
 
 
 
 
-window.deletearticleArray = deletearticleArray;
+
+
+
 window.addToCard = addToCard;
 window.generateShopingCart = generateShopingCart;
 
