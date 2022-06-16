@@ -54,7 +54,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-secondary" onclick="eliminar()"> <a class="color-white" href=""></a>Si</button>
+          <button type="button" class="btn btn-secondary" onclick="eliminar(id)"> <a class="color-white" href=""></a>Si</button>
         </div>
       </div>
     </div>
@@ -344,16 +344,23 @@
             }
             
             //funcion  Eliminar
-            function deletearticleArray(id){
-                let barticle = JSON.parse(localStorage.getItem("shoppingCart"))
-                for(i=0; i<barticle.length;i++){
-                    if(barticle[i].id === id){
-                        localStorage.removeItem(barticle)
-                    }
-                
-                }
-                
+            
+
+            function deletearticleArray(id) {
+            let NewArray = JSON.parse (localStorage.getItem("shoppingCart"))|| [];
+            for(i=0; i < NewArray.length ; i++){
+            if(NewArray[i].id === id){
+                NewArray.splice(i,1)                   
             }
+        }
+        return JSON.stringify(localStorage.setItem("shoppingCart", JSON.stringify(NewArray)))
+    }
+
+        function eliminar(){
+            window.location.reload()
+        }
+
+ 
 
     </script> 
   </body>
