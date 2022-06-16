@@ -10,31 +10,26 @@
   </head>
   <body >
     <!--header-->
-    <div class="row">
+    <div class="row bg-light color-blue">
         <div class="col-6">
             <img src="./img/logoacademlo.png" class="img-academlo" alt="">
             <h6>Academlo</h6>
         </div>
-        <div class="col-6 d-flex flex-row-reverse">
-            <button class="buttonshop">
-                <img src="./img/shopping_cart_checkout_FILL0_wght400_GRAD0_opsz48.svg" class="shopcar" alt="">
-                
-            </button>
-        </div>
+        
    </div >
 
    <!--titulo-->
    <div class="w-80 m-auto mb-3">
-        <h6 ><a href="index.html"><img src="img/arrow-left.svg" alt="flecha" ></a> Academlo-Tienda oficial</h6>
+        <h6 class="color-red " ><a href="index.html"><img  src="img/arrow-left.svg" alt="flecha" ></a>Academlo-Tienda oficial</h6>
     </div>
-    <div class="row w-80 bg-light my-2">
-        <p class="col-6"> Resumen del pedido</p>
+    <div class="row w-80 bg-light my-2 border-blue">
+        <h5 class="col-6 color-blue"> Resumen del pedido</h5>
         
-    </div>
+    </div >
 
     <!--Card de la compra-->
     
-    <div class="w-80 " id="container-con">
+    <div class="w-80  " id="container-con">
         
         
     </div>
@@ -127,20 +122,21 @@
 
     </div>
 
-    <div class="w-65 my-5" >
-        <h3>Resumen del pedido</h3>
+    <div class="w-65 my-5 bg-light border-blue color-blue p-3" >
+        <h3 >Resumen del pedido</h3>
        
         <div class="row justify-content-between">
             <p class="col-6 " >Subtotal</p>
-            <p class="col-6" >$ <span class="color-black" id="subTotal"></span> </p>
+            <p class="col-6" >$ <span class="color-blue" id="subTotal">0</span> </p>
         </div>
         <div class="row">
             <p class="col-6">Envio</p>
-            <p class="col-6">$<span class="color-black" id="envio">40</span></p>
+            <p class="col-6">$<span class="color-blue" id="envio">40</span></p>
         </div>
         <div class="row">
             <p class="col-6">Total</p>
-            <p class="col-6">$ <span class="color-black" id="total"></span></p>
+            <p class="col-6">$ <span class="color-blue
+                " id="total">0</span></p>
         </div>
     </div>
 
@@ -202,11 +198,8 @@
         </div>
     
     <!-- PIE DE PAGINA -->
-    <footer class=" mt-5 bg-red w-100 m-0 p-0">
-        <div class="d-flex justify-content-center align-items-center color-white  " >
-            <h6>Hecho en Academlo</h6>
-        </div>
-       
+    <footer>
+        <p class="color-white">Hecho con ♥ en Academlo</p>
     </footer>
     
     
@@ -224,9 +217,9 @@
             
             
             for(let i = 0; i < ShopCart.length; i++) {
-                html+=`<div class="card   bg-light"id="contenedor${i}">
+                html+=`<div class="card  color-blue bg-light border-blue border-top"id="contenedor${i}">
                             <div class="row g-0 px-5">
-                                <div class="col-4  pt-2  ">
+                                <div class="col-4   pt-2  ">
                                     <img src="${ShopCart[i].Imagen}" class="w-50" alt="">
                                 </div>
 
@@ -235,21 +228,21 @@
                                             <h5 class="card-title fw-bold">${ShopCart[i].Description}
                                             </h5>
                                             <div class="row justify-content-between">
-                                                <h5 class="card-title col-4">$ <span class="color-black">${ShopCart[i].Precio}</span></h5>
-                                                <h5 class="card-title col-4" >Total: $<span id="resultado${i}" class="color-black">${ShopCart[i].Precio}</span></h5>
-                                                <button class="col-3 bg-light  d-flex justify-content-center align-items-center btn-group " type="button"  id="" onclick="agregar(${i})">Confirmar </button> 
+                                                <h5 class="card-title col-4">$ <span class="color-blue">${ShopCart[i].Precio}</span></h5>
+                                                <h5 class="card-title col-4" >Total: $ <span id="resultado${i}" class="color-blue">${ShopCart[i].Precio}</span></h5>
+                                                <button class="col-2  d-flex justify-content-center align-items-center btn-group btn-verde color-white" type="button"  id="" onclick="agregar(${i})">Confirmar </button> 
                                             </div>
                                             <div class="row">
-                                                <p class="card-text col-4 mb-0">Cantidad:</p>
-                                                <p class="card-text col-6 color-r">Color:${ShopCart[i].Color}</p>
+                                                <p class="card-text col-3 mb-0">Cantidad</p>
+                                                <p class="card-text col-5 color-r">Color: ${ShopCart[i].Color}</p>
                                             </div>
                                             <div class="row justify-content-between">
-                                                <div class="col-4 d-flex text-center " >
-                                                    <input class="col-3 text-center" type="number" min="1" value="1" id="cantidad${i}">
+                                                <div class="col-4 d-flex text-center mx-2" >
+                                                    <input class="col-3 text-center " type="number" min="1" value="1" id="cantidad${i}">
                                                 </div>
                                                 
                                                  
-                                                <button class="col-2 col-sm-2 py-2 bg-light d-flex justify-content-center align-items-center btn-group" type="button" data-bs-toggle="modal" data-bs-target="#modaleliminar" onclick="deletearticleArray(${ShopCart[i].id})"><img src="img/trash3.svg " alt="" class="w-100% h-100%">
+                                                <button class="col-2 col-sm-2 py-2  d-flex justify-content-center align-items-center btn-group btn-rojo" type="button" data-bs-toggle="modal" data-bs-target="#modaleliminar" onclick="deletearticleArray(${ShopCart[i].id})"><img src="img/trash3.svg " alt="" class="w-100% h-100%">
                                         
 
                                             </div>
@@ -269,19 +262,7 @@
 
         generateShopingCart()
         
-        //funcion que elimina solo la parte visual
-        // function eliminar(id){
-                    
-        //     for(let i = 0; i < ShopCart.length; i++) {
-        //         html=""
-        //         s="shoppingCart"+"["+i+"]"
-        //         if(i==id){
-        //             contenedor="contenedor"+i
-        //             const containerE = document.getElementById(contenedor);
-        //             containerE.innerHTML =html;    
-        //         }
-        //     }
-        // }
+       
 
 
        
